@@ -105,3 +105,9 @@ D:\CapMedicial\CapMedicial\obj\Debug\CapMedicial.csproj.AssemblyReference.cache
 D:\CapMedicial\CapMedicial\obj\Debug\CapMedicial.csproj.CoreCompileInputs.cache
 D:\CapMedicial\CapMedicial\obj\Debug\CapMedicial.dll
 D:\CapMedicial\CapMedicial\obj\Debug\CapMedicial.pdb
+D:\CapMedicial\CapMedicial\bin\ExcelDataReader.DataSet.dll
+D:\CapMedicial\CapMedicial\bin\ExcelDataReader.dll
+D:\CapMedicial\CapMedicial\bin\ExcelDataReader.pdb
+D:\CapMedicial\CapMedicial\bin\ExcelDataReader.xml
+D:\CapMedicial\CapMedicial\bin\ExcelDataReader.DataSet.pdb
+D:\CapMedicial\CapMedicial\bin\ExcelDataReader.DataSet.xml

@@ -55,3 +55,9 @@ D:\CapMedicial\CapMedicial.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\Antlr3.Runtime.dll
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\Antlr3.Runtime.pdb
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.dll
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.DataSet.dll
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.pdb
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.xml
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.DataSet.xml
