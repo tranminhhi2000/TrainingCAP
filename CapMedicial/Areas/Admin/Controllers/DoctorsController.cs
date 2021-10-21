@@ -9,8 +9,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using CapMedicial.Models;
 using ExcelDataReader;
+using OfficeOpenXml;
 
 namespace CapMedicial.Areas.Admin.Controllers
 {
@@ -21,17 +23,17 @@ namespace CapMedicial.Areas.Admin.Controllers
         // GET: Admin/Doctors
         public ActionResult Index()
         {
-            DataTable dt = new DataTable();
+            //DataTable dt = new DataTable();
 
-            try
-            {
-                dt = (DataTable)Session["tmpdata"];
-            }
-            catch (Exception ex)
-            {
+            //try
+            //{
+            //    dt = (DataTable)Session["tmpdata"];
+            //}
+            //catch (Exception ex)
+            //{
 
-            }
-            ViewBag.DT = dt;
+            //}
+            //ViewBag.DT = dt;
             return View(db.Doctors.ToList());
         }
 
@@ -139,6 +141,38 @@ namespace CapMedicial.Areas.Admin.Controllers
                     sqlBulkCopy.WriteToServer(dt);
                     con.Close();
                 }
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Export()
+        {
+            //var doctors = db.Doctors.ToList();
+            var doctors = (from doc in db.Doctors select new { 
+                id = doc.ID,
+                Name = doc.Name,
+                Department = doc.Department,
+                Description = doc.Description
+            });
+
+            using (ExcelPackage pck = new ExcelPackage())
+            {
+                ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Doctors");
+                ws.Cells["A1"].LoadFromCollection(doctors, true);
+                // Load your collection "accounts"
+
+                Byte[] fileBytes = pck.GetAsByteArray();
+                Response.Clear();
+                Response.Buffer = true;
+                Response.AddHeader("content-disposition", "attachment;filename=Doctor.xlsx");
+                // Replace filename with your custom Excel-sheet name.
+
+                Response.Charset = "";
+                Response.ContentType = "application/vnd.ms-excel";
+                StringWriter sw = new StringWriter();
+                Response.BinaryWrite(fileBytes);
+                Response.End();
             }
 
             return RedirectToAction("Index");

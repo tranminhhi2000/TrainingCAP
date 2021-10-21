@@ -111,3 +111,8 @@ D:\CapMedicial\CapMedicial\bin\ExcelDataReader.pdb
 D:\CapMedicial\CapMedicial\bin\ExcelDataReader.xml
 D:\CapMedicial\CapMedicial\bin\ExcelDataReader.DataSet.pdb
 D:\CapMedicial\CapMedicial\bin\ExcelDataReader.DataSet.xml
+D:\CapMedicial\CapMedicial\bin\EPPlus.dll
+D:\CapMedicial\CapMedicial\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\CapMedicial\CapMedicial\bin\System.ComponentModel.Annotations.dll
+D:\CapMedicial\CapMedicial\bin\EPPlus.xml
+D:\CapMedicial\CapMedicial\bin\Microsoft.IO.RecyclableMemoryStream.xml

@@ -61,3 +61,7 @@ D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.pdb
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.xml
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.DataSet.pdb
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\ExcelDataReader.DataSet.xml
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\EPPlus.dll
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\EPPlus.xml
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
