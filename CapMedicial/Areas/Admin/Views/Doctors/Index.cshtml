@@ -73,18 +73,37 @@
                     </nav>
                 </div>
             </div>
+
+            <div class="d-flex justify-content-between">
+                <fieldset style="width:50%">
+                    @using (Html.BeginForm("ImportExcel", "Doctors", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="input-group">
+                            <input multiple type="file" name="uploads" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            <input id="inputGroupFileAddon04" type="submit" value="Upload" class="btn btn-primary" />
+                        </div>}
+                </fieldset>
+                <div class="buttons">
+                    @using (Html.BeginForm("Export", "Doctors"))
+                    {
+                     <input class="btn btn-primary" type="submit" name="Export" value="Export to Excel" />
+                    }
+                </div>
+            </div>
+
         </div>
         <section class="section">
             <div class="card">
 
-                @using (Html.BeginForm("ImportExcel", "Doctors", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                <!--using (Html.BeginForm("ImportExcel", "Doctors", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
                 {
                     <div class="info2">                      
-                        @Html.AntiForgeryToken()
+                        Html.AntiForgeryToken()
 
-                        <div class="form-group" name="Fichier1">
+                        <div class="form-group" name="Fichier1">-->
                             <!-- COMPONENT START -->
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <div class="input-group input-file">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default btn-choose" type="button">Choose</button>
@@ -93,7 +112,7 @@
 
                                 </div>
                             </div>
-                            @*<input type="file" id="dataFile" name="upload" />*@
+                            
 
                         </div>
 
@@ -103,39 +122,16 @@
 
 
                         <div>
-                            @Html.ValidationSummary()
-                            @*<strong></strong> asdasd*@
+                            Html.ValidationSummary()
+                            
                         </div>
 
 
 
                     </div>
-                    @*if (ViewBag.DT != null)
-                        {
-                            <table id="table1" class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        @foreach (DataColumn col in ViewBag.DT.Columns)
-                                        {
-                                            <th>@col.ColumnName</th>
-                                        }
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (DataRow row in ViewBag.DT.Rows)
-                                    {
-                                        <tr>
-                                            @foreach (DataColumn col in ViewBag.DT.Columns)
-                                            {
-                                                <td>@row[col.ColumnName]</td>
-                                            }
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                        }*@
+                    
                 }
-                @using (Html.BeginForm("Export", "Doctors"))
+                using (Html.BeginForm("Export", "Doctors"))
                 {
                     <table>
                         <tr>
@@ -145,7 +141,7 @@
                             </td>
                         </tr>
                     </table>
-                }
+                }-->
 
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
