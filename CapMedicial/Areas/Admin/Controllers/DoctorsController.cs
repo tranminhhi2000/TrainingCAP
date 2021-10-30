@@ -204,7 +204,7 @@ namespace CapMedicial.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Doctor doctor)
+        public ActionResult Create(HttpPostedFileBase image ,Doctor doctor)
         {
             if (ModelState.IsValid)
             {

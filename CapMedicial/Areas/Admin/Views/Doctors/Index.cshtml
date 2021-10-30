@@ -95,58 +95,14 @@
         </div>
         <section class="section">
             <div class="card">
-
-                <!--using (Html.BeginForm("ImportExcel", "Doctors", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
-                {
-                    <div class="info2">                      
-                        Html.AntiForgeryToken()
-
-                        <div class="form-group" name="Fichier1">-->
-                            <!-- COMPONENT START -->
-                            <!--<div class="form-group">
-                                <div class="input-group input-file">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default btn-choose" type="button">Choose</button>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder='Choose a file...' />
-
-                                </div>
-                            </div>
-                            
-
-                        </div>
-
-                        <div class="form-group">
-                            <input type="submit" value="Upload" class="btn btn-default" />
-                        </div>
-
-
-                        <div>
-                            Html.ValidationSummary()
-                            
-                        </div>
-
-
-
-                    </div>
-                    
-                }
-                using (Html.BeginForm("Export", "Doctors"))
-                {
-                    <table>
-                        <tr>
-                            <td>Export Data : </td>
-                            <td>
-                                <input type="submit" name="Export" value="Export to Excel" />
-                            </td>
-                        </tr>
-                    </table>
-                }-->
-
+                <div class="card-header">
+                    <a class="btn btn-primary" href="@Url.Action("Create", "Doctors")">Create</a>
+                </div>
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>
                             <tr>
+                                <th>Image</th>
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Department</th>
@@ -157,6 +113,7 @@
                             @foreach (var item in Model)
                             {
                                 <tr>
+                                    <td><img src="@item.Image"/></td>
                                     <td>@item.Name</td>
                                     <td>@item.Department</td>
                                     <td>@item.Description</td>
