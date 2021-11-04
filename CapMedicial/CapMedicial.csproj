@@ -288,6 +288,7 @@
   <ItemGroup>
     <Content Include="Areas\Admin\assets\css\app.css" />
     <Content Include="Areas\Admin\assets\css\bootstrap.css" />
+    <Content Include="Areas\Admin\assets\css\Custom.css" />
     <Content Include="Areas\Admin\assets\css\pages\auth.css" />
     <Content Include="Areas\Admin\assets\css\pages\chat.css" />
     <Content Include="Areas\Admin\assets\css\pages\dripicons.css" />
@@ -1888,6 +1889,7 @@
     <Content Include="Areas\Admin\assets\vendors\toastify\toastify.css" />
     <Content Include="Areas\Admin\assets\vendors\toastify\toastify.js" />
     <Content Include="Areas\Admin\Views\Shared\component-button.html" />
+    <Content Include="Areas\Admin\Views\Shared\extra-component-sweetalert.html" />
     <Content Include="Areas\Admin\Views\Shared\form-element-input-group.html" />
     <Content Include="Areas\Admin\Views\Shared\table-datatable.html" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -2041,6 +2043,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="ImageDoctors\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

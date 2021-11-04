@@ -65,3 +65,7 @@ D:\CapMedicial\CapMedicial.Tests\bin\Debug\EPPlus.dll
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\EPPlus.xml
 D:\CapMedicial\CapMedicial.Tests\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\CloudinaryDotNet.dll
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\System.Text.Encodings.Web.dll
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\CloudinaryDotNet.xml
+D:\CapMedicial\CapMedicial.Tests\bin\Debug\System.Text.Encodings.Web.xml

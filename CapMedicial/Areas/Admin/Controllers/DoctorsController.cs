@@ -11,6 +11,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
 using CapMedicial.Models;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using ExcelDataReader;
 using OfficeOpenXml;
 
@@ -206,8 +208,19 @@ namespace CapMedicial.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(HttpPostedFileBase image ,Doctor doctor)
         {
+            var myAccount = new Account { ApiKey = ConfigurationManager.AppSettings["APIKey"], ApiSecret = ConfigurationManager.AppSettings["APISecret"], Cloud = ConfigurationManager.AppSettings["CloudName"] };
+            Cloudinary _cloudinary = new Cloudinary(myAccount);
             if (ModelState.IsValid)
             {
+                var direct = Path.Combine(Server.MapPath("~/ImageDoctors"), image.FileName);
+                image.SaveAs(direct);
+                var uploadParams = new ImageUploadParams()
+                {
+                    File = new FileDescription(direct),
+                    Folder = "Training"
+                };
+                var uploadResult = _cloudinary.Upload(uploadParams);
+                doctor.Image = uploadResult.SecureUrl.AbsoluteUri;
                 db.Doctors.Add(doctor);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -264,13 +277,14 @@ namespace CapMedicial.Areas.Admin.Controllers
 
         // POST: Admin/Doctors/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Doctor doctor = db.Doctors.Find(id);
             db.Doctors.Remove(doctor);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //return RedirectToAction("Index");
+            return Json( new { success = true });
         }
 
         protected override void Dispose(bool disposing)
